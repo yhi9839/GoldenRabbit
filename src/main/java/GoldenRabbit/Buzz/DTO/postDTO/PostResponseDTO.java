@@ -1,26 +1,16 @@
-package GoldenRabbit.Buzz.domain;
+package GoldenRabbit.Buzz.DTO.postDTO;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @Builder
-public class Post {
-
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class PostResponseDTO {
     private Long id;
-
-    @Column(nullable = false)
     private String title;
-
-    @Column(nullable = false)
     private String content;
-
-
 }
